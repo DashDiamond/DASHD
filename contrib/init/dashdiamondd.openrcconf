@@ -1,0 +1,26 @@
+# /etc/conf.d/dashdiamondd: config file for /etc/init.d/dashdiamondd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/dashdiamond/dashdiamond.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/dashdiamondd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/dashdiamondd.pid"
+
+# Where to write dashdiamondd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/dashdiamondd"
+
+# User and group to own dashdiamondd process
+#BITCOIND_USER="dashdiamond"
+#BITCOIND_GROUP="dashdiamond"
+
+# Path to dashdiamondd executable
+#BITCOIND_BIN="/usr/bin/dashdiamondd"
+
+# Nice value to run dashdiamondd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

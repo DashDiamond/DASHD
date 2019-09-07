@@ -1,0 +1,2 @@
+usr/local/bin/dashdiamondd usr/bin
+usr/local/bin/dashdiamond-cli usr/bin

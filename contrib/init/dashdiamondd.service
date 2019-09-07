@@ -1,0 +1,26 @@
+[Unit]
+Description=DashDiamond's distributed currency daemon
+After=network.target
+
+[Service]
+User=dashdiamond
+Group=dashdiamond
+
+Type=forking
+PIDFile=/var/lib/dashdiamondd/dashdiamondd.pid
+
+ExecStart=/usr/bin/dashdiamondd -daemon -pid=/var/lib/dashdiamondd/dashdiamondd.pid \
+          -conf=/etc/dashdiamond/dashdiamond.conf -datadir=/var/lib/dashdiamondd
+
+ExecStop=-/usr/bin/dashdiamond-cli -conf=/etc/dashdiamond/dashdiamond.conf \
+         -datadir=/var/lib/dashdiamondd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

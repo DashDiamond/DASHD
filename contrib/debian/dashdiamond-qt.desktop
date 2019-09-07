@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=DashDiamond
+Comment=DashDiamond P2P Cryptocurrency
+Comment[fr]=DashDiamond, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=DashDiamond, eşten eşe kriptografik sanal para birimi
+Exec=dashdiamond-qt %u
+Terminal=false
+Type=Application
+Icon=dashdiamond128
+MimeType=x-scheme-handler/dashdiamond;
+Categories=Office;Finance;
